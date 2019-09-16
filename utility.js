@@ -18,9 +18,23 @@ function sleep(ms) {
   })
 }
 
+function a_value(user) {
+  if (getscore(user) > 21) {
+    for (let card of user) {
+      if (card[2] == 11) {
+        card[2] = 1
+        if (getscore(user) < 21) {
+          break
+        }
+      }
+    }
+  }
+}
+
 module.exports = {
   getscore,
   endGame,
   checkCard,
-  sleep
+  sleep,
+  a_value
 }
