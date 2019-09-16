@@ -1,0 +1,5 @@
+const { screen } = require('./screen.js')
+const { list } = require('./menu.js')
+screen.append(list)
+screen.render()
+list.focus()
