@@ -95,7 +95,8 @@ async function bj() {
   await sleep(1000)
 
   screen.append(start)
-  start.focus(0)
+  start.focus()
+  start.select(0)
   screen.render()
   if (checkCard(getscore(user))) {
     stand()
@@ -105,6 +106,7 @@ async function bj() {
 }
 
 async function stand() {
+  await sleep(500)
   start.destroy()
   userScore = getscore(user)
   let result = false

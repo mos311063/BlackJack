@@ -22,7 +22,6 @@ let start = blessed.list({
 })
 start.setLabel('Hit or Stand?')
 start.setItems(['hit', 'stand', 'quit'])
-
 module.exports = {
   start
 }
